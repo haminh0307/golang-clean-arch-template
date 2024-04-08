@@ -1,3 +1,3 @@
-# Rainbow Love Memory
+# Golang Clean Architecture Template
 
-Golang REST APIs for Rainbow Love Memory.
+Template for Golang REST APIs server using Clean Architecture.
