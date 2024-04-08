@@ -1,0 +1,325 @@
+basePath: /
+definitions:
+  entity.ID:
+    enum:
+    - ""
+    type: string
+    x-enum-varnames:
+    - NilID
+  entity.User:
+    properties:
+      createdAt:
+        type: string
+      fullName:
+        type: string
+      id:
+        $ref: '#/definitions/entity.ID'
+      updatedAt:
+        type: string
+      username:
+        type: string
+    type: object
+  entity.UserToCreate:
+    properties:
+      fullName:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  entity.UserToUpdate:
+    properties:
+      fullName:
+        type: string
+      username:
+        type: string
+    type: object
+  request.SignIn:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  restapi.Response:
+    properties:
+      data:
+        description: Data contains the response body for the success case.
+      error:
+        description: In other cases, this contains the error.
+        type: string
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Backend API
+  version: "1.0"
+paths:
+  /authentication/signin:
+    post:
+      consumes:
+      - application/json
+      description: Sign in.
+      parameters:
+      - description: User credentials
+        in: body
+        name: credentials
+        required: true
+        schema:
+          $ref: '#/definitions/request.SignIn'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  properties:
+                    token:
+                      type: string
+                  type: object
+                error:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "401":
+          description: Unauthorized
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+      summary: Sign in.
+      tags:
+      - authentication
+  /authentication/signup:
+    post:
+      consumes:
+      - application/json
+      description: Sign up new account.
+      parameters:
+      - description: User to be created
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UserToCreate'
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+          headers:
+            Location:
+              description: /users/:id
+              type: string
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+      summary: Sign up new account.
+      tags:
+      - authentication
+  /users/{userID}:
+    get:
+      consumes:
+      - application/json
+      description: Read one user.
+      parameters:
+      - description: user id
+        in: path
+        name: userID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  properties:
+                    user:
+                      $ref: '#/definitions/entity.User'
+                  type: object
+                error:
+                  type: object
+              type: object
+        "401":
+          description: Unauthorized
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "403":
+          description: Forbidden
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+      security:
+      - Bearer: []
+      summary: Read one user.
+      tags:
+      - user
+    patch:
+      consumes:
+      - application/json
+      description: Update one user.
+      parameters:
+      - description: user id
+        in: path
+        name: userID
+        required: true
+        type: string
+      - description: user update data
+        in: body
+        name: update
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UserToUpdate'
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "401":
+          description: Unauthorized
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "403":
+          description: Forbidden
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/restapi.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+      security:
+      - Bearer: []
+      summary: Update one user.
+      tags:
+      - user
+securityDefinitions:
+  Bearer:
+    description: Type "Bearer" followed by a space and JWT token.
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
