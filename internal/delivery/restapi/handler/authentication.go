@@ -29,7 +29,7 @@ func NewAuthentication(a usecase.Authentication) *Authentication {
 //	@Accept			json
 //	@Produce		json
 //	@Param			user	body	entity.UserToCreate	true	"User to be created"
-//	@Success		204
+//	@Success		201
 //	@Failure		400	{object}	restapi.Response{data=nil}
 //	@Failure		500	{object}	restapi.Response{data=nil}
 //	@Header			204	{string}	Location	"/users/:id"
@@ -46,7 +46,7 @@ func (h *Authentication) SignUp(ctx *gin.Context) {
 	switch {
 	case err == nil:
 		ctx.Header("Location", fmt.Sprintf("/users/%s", id.String()))
-		ctx.Status(http.StatusNoContent)
+		ctx.Status(http.StatusCreated)
 	default:
 		ctx.JSON(http.StatusInternalServerError, restapi.Response{Error: err.Error()})
 	}

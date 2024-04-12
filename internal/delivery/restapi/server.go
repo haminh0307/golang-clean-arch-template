@@ -49,7 +49,6 @@ func NewServer(host string, port string, controllers ...Controller) *http.Server
 	}
 
 	return &http.Server{
-
 		Addr:    host + ":" + port,
 		Handler: engine,
 	}
