@@ -2,8 +2,8 @@ package usecase
 
 import (
 	"context"
-	"rainbow-love-memory/internal/domain/entity"
-	"rainbow-love-memory/internal/domain/interface/repository"
+	"golang-clean-arch-template/internal/domain/entity"
+	"golang-clean-arch-template/internal/domain/interface/repository"
 )
 
 type user struct {

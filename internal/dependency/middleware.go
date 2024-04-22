@@ -1,7 +1,7 @@
 package dependency
 
 import (
-	"rainbow-love-memory/internal/delivery/restapi/middleware"
+	"golang-clean-arch-template/internal/delivery/restapi/middleware"
 
 	"go.uber.org/fx"
 )

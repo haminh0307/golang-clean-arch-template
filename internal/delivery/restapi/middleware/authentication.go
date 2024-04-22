@@ -2,10 +2,10 @@ package middleware
 
 import (
 	"errors"
+	"golang-clean-arch-template/internal/delivery/restapi"
+	"golang-clean-arch-template/internal/domain/entity"
+	"golang-clean-arch-template/internal/domain/interface/infra"
 	"net/http"
-	"rainbow-love-memory/internal/delivery/restapi"
-	"rainbow-love-memory/internal/domain/entity"
-	"rainbow-love-memory/internal/domain/interface/infra"
 	"strings"
 
 	"github.com/gin-gonic/gin"

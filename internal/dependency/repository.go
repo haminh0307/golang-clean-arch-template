@@ -1,8 +1,8 @@
 package dependency
 
 import (
-	"rainbow-love-memory/internal/domain/interface/repository"
-	"rainbow-love-memory/internal/mongorepo"
+	"golang-clean-arch-template/internal/domain/interface/repository"
+	"golang-clean-arch-template/internal/mongorepo"
 
 	"go.uber.org/fx"
 )

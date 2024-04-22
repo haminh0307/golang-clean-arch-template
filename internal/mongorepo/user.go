@@ -3,8 +3,8 @@ package mongorepo
 import (
 	"context"
 	"errors"
-	"rainbow-love-memory/internal/domain"
-	"rainbow-love-memory/internal/domain/entity"
+	"golang-clean-arch-template/internal/domain"
+	"golang-clean-arch-template/internal/domain/entity"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

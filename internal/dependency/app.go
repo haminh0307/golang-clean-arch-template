@@ -2,8 +2,8 @@ package dependency
 
 import (
 	"context"
-	"rainbow-love-memory/config"
-	"rainbow-love-memory/internal/delivery/restapi"
+	"golang-clean-arch-template/config"
+	"golang-clean-arch-template/internal/delivery/restapi"
 
 	"go.uber.org/fx"
 )

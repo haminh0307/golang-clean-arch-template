@@ -2,7 +2,7 @@ package usecase
 
 import (
 	"context"
-	"rainbow-love-memory/internal/domain/entity"
+	"golang-clean-arch-template/internal/domain/entity"
 )
 
 type User interface {

@@ -3,10 +3,10 @@ package usecase
 import (
 	"context"
 	"errors"
-	"rainbow-love-memory/internal/domain"
-	"rainbow-love-memory/internal/domain/entity"
-	"rainbow-love-memory/internal/domain/interface/infra"
-	"rainbow-love-memory/internal/domain/interface/repository"
+	"golang-clean-arch-template/internal/domain"
+	"golang-clean-arch-template/internal/domain/entity"
+	"golang-clean-arch-template/internal/domain/interface/infra"
+	"golang-clean-arch-template/internal/domain/interface/repository"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"

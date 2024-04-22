@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"rainbow-love-memory/internal/delivery/restapi/handler"
+	"golang-clean-arch-template/internal/delivery/restapi/handler"
 
 	"github.com/gin-gonic/gin"
 )

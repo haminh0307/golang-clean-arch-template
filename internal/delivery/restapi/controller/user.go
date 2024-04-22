@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"rainbow-love-memory/internal/delivery/restapi/handler"
-	"rainbow-love-memory/internal/delivery/restapi/middleware"
+	"golang-clean-arch-template/internal/delivery/restapi/handler"
+	"golang-clean-arch-template/internal/delivery/restapi/middleware"
 
 	"github.com/gin-gonic/gin"
 )

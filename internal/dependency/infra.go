@@ -1,9 +1,9 @@
 package dependency
 
 import (
-	"rainbow-love-memory/internal/domain/interface/infra"
-	"rainbow-love-memory/pkg/jwtprovider"
-	mongopkg "rainbow-love-memory/pkg/mongo"
+	"golang-clean-arch-template/internal/domain/interface/infra"
+	"golang-clean-arch-template/pkg/jwtprovider"
+	mongopkg "golang-clean-arch-template/pkg/mongo"
 
 	"go.uber.org/fx"
 )

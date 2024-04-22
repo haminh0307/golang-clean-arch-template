@@ -1,7 +1,7 @@
 package main
 
 import (
-	"rainbow-love-memory/internal/dependency"
+	"golang-clean-arch-template/internal/dependency"
 
 	"go.uber.org/fx"
 )

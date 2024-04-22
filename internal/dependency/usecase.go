@@ -1,8 +1,8 @@
 package dependency
 
 import (
-	"rainbow-love-memory/internal/domain/interface/usecase"
-	ucimpl "rainbow-love-memory/internal/usecase"
+	"golang-clean-arch-template/internal/domain/interface/usecase"
+	ucimpl "golang-clean-arch-template/internal/usecase"
 
 	"go.uber.org/fx"
 )

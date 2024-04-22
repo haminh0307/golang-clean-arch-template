@@ -2,11 +2,11 @@ package handler
 
 import (
 	"errors"
+	"golang-clean-arch-template/internal/delivery/restapi"
+	"golang-clean-arch-template/internal/domain"
+	"golang-clean-arch-template/internal/domain/entity"
+	"golang-clean-arch-template/internal/domain/interface/usecase"
 	"net/http"
-	"rainbow-love-memory/internal/delivery/restapi"
-	"rainbow-love-memory/internal/domain"
-	"rainbow-love-memory/internal/domain/entity"
-	"rainbow-love-memory/internal/domain/interface/usecase"
 
 	"github.com/gin-gonic/gin"
 )

@@ -175,14 +175,8 @@ const docTemplate = `{
                     }
                 ],
                 "responses": {
-                    "204": {
-                        "description": "No Content",
-                        "headers": {
-                            "Location": {
-                                "type": "string",
-                                "description": "/users/:id"
-                            }
-                        }
+                    "201": {
+                        "description": "Created"
                     },
                     "400": {
                         "description": "Bad Request",
