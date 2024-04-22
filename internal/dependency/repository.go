@@ -1,8 +1,8 @@
 package dependency
 
 import (
-	"golang-clean-arch-template/internal/domain/interface/repository"
-	"golang-clean-arch-template/internal/mongorepo"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/repository"
+	"github.com/haminh0307/golang-clean-arch-template/internal/mongorepo"
 
 	"go.uber.org/fx"
 )

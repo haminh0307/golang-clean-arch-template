@@ -1,8 +1,8 @@
 package dependency
 
 import (
-	"golang-clean-arch-template/internal/delivery/restapi"
-	"golang-clean-arch-template/internal/delivery/restapi/controller"
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi"
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi/controller"
 
 	"go.uber.org/fx"
 )

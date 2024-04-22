@@ -3,11 +3,12 @@ package usecase
 import (
 	"context"
 	"errors"
-	"golang-clean-arch-template/internal/domain"
-	"golang-clean-arch-template/internal/domain/entity"
-	"golang-clean-arch-template/internal/domain/interface/infra"
-	"golang-clean-arch-template/internal/domain/interface/repository"
 	"time"
+
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/entity"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/infra"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/repository"
 
 	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/bcrypt"

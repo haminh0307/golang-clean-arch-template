@@ -1,9 +1,9 @@
 package dependency
 
 import (
-	"golang-clean-arch-template/internal/domain/interface/infra"
-	"golang-clean-arch-template/pkg/jwtprovider"
-	mongopkg "golang-clean-arch-template/pkg/mongo"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/infra"
+	"github.com/haminh0307/golang-clean-arch-template/pkg/jwtprovider"
+	mongopkg "github.com/haminh0307/golang-clean-arch-template/pkg/mongo"
 
 	"go.uber.org/fx"
 )

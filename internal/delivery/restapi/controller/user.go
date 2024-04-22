@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"golang-clean-arch-template/internal/delivery/restapi/handler"
-	"golang-clean-arch-template/internal/delivery/restapi/middleware"
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi/handler"
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi/middleware"
 
 	"github.com/gin-gonic/gin"
 )

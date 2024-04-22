@@ -3,12 +3,13 @@ package handler
 import (
 	"errors"
 	"fmt"
-	"golang-clean-arch-template/internal/delivery/restapi"
-	"golang-clean-arch-template/internal/delivery/restapi/request"
-	"golang-clean-arch-template/internal/domain"
-	"golang-clean-arch-template/internal/domain/entity"
-	"golang-clean-arch-template/internal/domain/interface/usecase"
 	"net/http"
+
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi"
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi/request"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/entity"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/usecase"
 
 	"github.com/gin-gonic/gin"
 )

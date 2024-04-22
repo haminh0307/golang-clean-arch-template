@@ -1,4 +1,4 @@
-module golang-clean-arch-template
+module github.com/haminh0307/golang-clean-arch-template
 
 go 1.21.6
 

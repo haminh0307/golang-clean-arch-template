@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"golang-clean-arch-template/internal/delivery/restapi/handler"
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi/handler"
 
 	"github.com/gin-gonic/gin"
 )

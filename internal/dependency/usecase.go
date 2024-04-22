@@ -1,8 +1,8 @@
 package dependency
 
 import (
-	"golang-clean-arch-template/internal/domain/interface/usecase"
-	ucimpl "golang-clean-arch-template/internal/usecase"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/usecase"
+	ucimpl "github.com/haminh0307/golang-clean-arch-template/internal/usecase"
 
 	"go.uber.org/fx"
 )

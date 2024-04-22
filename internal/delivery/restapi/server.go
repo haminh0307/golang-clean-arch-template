@@ -1,8 +1,9 @@
 package restapi
 
 import (
-	_ "golang-clean-arch-template/internal/docs"
 	"net/http"
+
+	_ "github.com/haminh0307/golang-clean-arch-template/internal/docs"
 
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"

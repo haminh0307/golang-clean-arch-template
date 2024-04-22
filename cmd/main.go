@@ -1,7 +1,7 @@
 package main
 
 import (
-	"golang-clean-arch-template/internal/dependency"
+	"github.com/haminh0307/golang-clean-arch-template/internal/dependency"
 
 	"go.uber.org/fx"
 )

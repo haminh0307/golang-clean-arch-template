@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"golang-clean-arch-template/internal/domain/entity"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/entity"
 )
 
 type User interface {

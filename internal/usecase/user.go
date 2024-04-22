@@ -2,8 +2,9 @@ package usecase
 
 import (
 	"context"
-	"golang-clean-arch-template/internal/domain/entity"
-	"golang-clean-arch-template/internal/domain/interface/repository"
+
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/entity"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/repository"
 )
 
 type user struct {

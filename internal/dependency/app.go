@@ -2,8 +2,9 @@ package dependency
 
 import (
 	"context"
-	"golang-clean-arch-template/config"
-	"golang-clean-arch-template/internal/delivery/restapi"
+
+	"github.com/haminh0307/golang-clean-arch-template/config"
+	"github.com/haminh0307/golang-clean-arch-template/internal/delivery/restapi"
 
 	"go.uber.org/fx"
 )

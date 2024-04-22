@@ -3,8 +3,9 @@ package mongorepo
 import (
 	"context"
 	"errors"
-	"golang-clean-arch-template/internal/domain"
-	"golang-clean-arch-template/internal/domain/entity"
+
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain"
+	"github.com/haminh0307/golang-clean-arch-template/internal/domain/entity"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
