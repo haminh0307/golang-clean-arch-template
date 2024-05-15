@@ -1,0 +1,15 @@
+with-expecter: True
+mockname: "{{.InterfaceName}}"
+filename: "{{.InterfaceName | lower}}.go"
+dir: "mocks/{{.PackageName}}"
+outpkg: "mocks{{.PackageName}}"
+packages:
+  github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/infra:
+    config:
+      all: True
+  github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/repository:
+    config:
+      all: True
+  github.com/haminh0307/golang-clean-arch-template/internal/domain/interface/usecase:
+    config:
+      all: True
